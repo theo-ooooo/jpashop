@@ -5,15 +5,17 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.PersistenceUnit;
 import jpabook.jpashop.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    @PersistenceContext
-    private EntityManager em;
+    // @PersistenceContext -> @AutoWired 로 치환 가능 이기에 생성자가 하나일경우 생략가능.
+    private final EntityManager em;
 
 //    @PersistenceUnit
 //    private EntityManagerFactory emf;
