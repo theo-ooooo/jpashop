@@ -16,18 +16,18 @@ public abstract class Item {
 
     private String name;
     private int price;
-    private int stackQuantity;
+    private int stockQuantity;
 
 
     public void addStock(int quantity) {
-        this.stackQuantity += quantity;
+        this.stockQuantity += quantity;
     }
 
     public void removeStock(int quantity) {
-        int restStock = this.stackQuantity - quantity;
+        int restStock = this.stockQuantity - quantity;
         if (restStock < 0) {
             throw new NotEnoughStockException("need more stock");
         }
-        stackQuantity = restStock;
+        stockQuantity = restStock;
     }
 }
