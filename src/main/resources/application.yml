@@ -19,4 +19,4 @@ logging:
   level:
     org.hibernate.SQL: debug
     org.hibernate.type.descriptor.sql: trace  # ✅ SQL 실행 시 바인딩된 값까지 보이도록 추가
-    org.hibernate.orm.jdbc.bind: trace        # ✅ 바인딩된 값이 안 보이면 이 설정도 추가
+#    org.hibernate.orm.jdbc.bind: trace        # ✅ 바인딩된 값이 안 보이면 이 설정도 추가
