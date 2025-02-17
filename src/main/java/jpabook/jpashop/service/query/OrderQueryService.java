@@ -30,7 +30,7 @@ public class OrderQueryService {
     private final OrderQueryRepository orderQueryRepository;
 
     public List<Order> ordersV1() {
-        List<Order> all = orderRepository.findAllByString(new OrderSearch());
+        List<Order> all = orderRepository.findAll(new OrderSearch());
         for (Order order : all) {
             order.getMember().getName(); // LAzy  초기화
             order.getDelivery().getAddress(); // Lazy 초기화
@@ -43,7 +43,7 @@ public class OrderQueryService {
     }
 
     public List<OrderDto> ordersV2() {
-        List<Order> orders = orderRepository.findAllByString(new OrderSearch());
+        List<Order> orders = orderRepository.findAll(new OrderSearch());
         return orders.stream().map(OrderDto::new).collect(toList());
     }
 

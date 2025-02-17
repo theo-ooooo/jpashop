@@ -15,7 +15,7 @@ spring:
           print:
             bindings: true  # ✅ 바인딩된 SQL 파라미터 값 로그 출력 활성화
         default_batch_fetch_size: 5
-    open-in-view: false
+#    open-in-view: false
 
 logging:
   level:
